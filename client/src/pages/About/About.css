@@ -21,7 +21,11 @@
 
 h1, h3 {
 	color: #238fee;
-	font-family: 'Merriweather', serif;
-	font-weight: 900px;
+	/*font-family: 'Merriweather', serif;*/
+	/*font-family: 'Droid Serif', serif;*/
+	font-family: 'PT Serif', serif;
+	/*font-family: 'Arvo', serif;*/
+	/*font-family: 'Libre Baskerville', serif;*/
+	font-weight: bold;
 
 }

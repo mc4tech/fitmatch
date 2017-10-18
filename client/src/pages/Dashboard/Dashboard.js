@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Panel, ControlLabel, Glyphicon } from 'react-bootstrap';
+import API from "../../utils/API";
 // import './Profile.css';
 
 class Dashboard extends Component {
@@ -13,7 +14,36 @@ class Dashboard extends Component {
     } else {
       this.setState({ profile: userProfile });
     }
-  }
+  };
+  state = {
+    users: [],
+    username: "",
+    oneMileRun: "",
+    avgMileJogging: "",
+    avgMileBiking: "",
+    open: true,
+  };
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.username && this.state.avgMileWalking) {
+      API.saveUser({
+        username: this.state.username,
+        oneMileRun: this.state.oneMileRun,
+        avgMileJogging: this.state.avgMileJogging,
+        avgMileBiking: this.state.avgMileBiking,
+      })
+        .then(res => this.loadUsers())
+        .catch(err => console.log(err));
+    }
+  };
+
   render() {
     const { profile } = this.state;
     return (
