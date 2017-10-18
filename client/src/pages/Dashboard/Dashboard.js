@@ -59,9 +59,9 @@ class Dashboard extends Component {
             </div>
             <div  aria-expanded={this.state.open}>
             <Row>
-              <Col size="md-6">
+              <Col size="md-12">
               
-                  <h1>Please Complete Your Profile?</h1>
+                  <h4>Please Complete Your Profile?</h4>
          
                 <form>
                   <Input
@@ -100,7 +100,7 @@ class Dashboard extends Component {
                
             </Row>
           </div>
-            <pre>{JSON.stringify(profile, null, 2)}</pre>
+            {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}
           </Panel>
         </div>
       </div>
