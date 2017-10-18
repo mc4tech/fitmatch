@@ -47,7 +47,7 @@ class Dashboard extends Component {
   render() {
     const { profile } = this.state;
     return (
-      <div className="container">
+      <div className="container" id="profile">
         <div className="profile-area">
           <Panel header="Profile">
             <img src={profile.picture} alt="profile" />
