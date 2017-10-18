@@ -53,10 +53,10 @@ img {
 }
 
 .top-bar-right {
+  font-size: 1.2em;
   color: #777;
   float: right;
   cursor: pointer;
-  margin-top: 15px;
   margin-left: 15px;
 }
 

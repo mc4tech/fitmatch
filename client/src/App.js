@@ -40,22 +40,26 @@ class App extends Component {
             </Button>
             {
               !isAuthenticated() && (
+                  <Navbar.Brand>
                   <a
                     className="top-bar-right"
                     onClick={this.login.bind(this)}
                   ><i className="fa fa-sign-in" aria-hidden="true"></i>
                     Log In
                   </a>
+                  </Navbar.Brand>
                 )
             }
             {
               !isAuthenticated() && (
+                  <Navbar.Brand>
                   <a
                     className="top-bar-right"
                     onClick={this.login.bind(this)}
                   ><i className="fa fa-pencil" aria-hidden="true"></i>
                     Sign Up
                   </a>
+                  </Navbar.Brand>
                 )
             }
             {
@@ -71,12 +75,14 @@ class App extends Component {
             }
             {
               isAuthenticated() && (
+                  <Navbar.Brand>
                   <a
                     className="top-bar-right"
                     onClick={this.logout.bind(this)}
                   ><i className="fa fa-sign-out" aria-hidden="true"></i>
                     Logout
                   </a>
+                  </Navbar.Brand>
                 )
             }
         </Navbar>
