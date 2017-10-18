@@ -1,0 +1,27 @@
+.links {
+	width: 60px;
+	height: 60px;
+	margin-top: 5%;
+}
+
+.col-bioContent {	
+	margin-top: 5%;
+}
+
+.bioPic {
+	width: 100%;
+	height:auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#bottom {
+	margin-bottom: 10%;
+}
+
+h1, h3 {
+	color: #238fee;
+	font-family: 'Merriweather', serif;
+	font-weight: 900px;
+
+}
