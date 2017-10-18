@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import Panel from "../components/Panel";
+import { Col, Row, Container } from "../../components/Grid";
+import Panel from "../../components/Panel";
 import Safiyya from "./Images/Safiyya.jpg";
 import Menelik from "./Images/Menelik.jpg";
 import Ray from "./Images/Ray.jpg";
