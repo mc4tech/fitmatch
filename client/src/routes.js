@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Router } from 'react-router-dom';
 import App from './App';
-import Home from './Home/Home';
-import About from './About/About';
-import Dashboard from './Dashboard/Dashboard';
-import Callback from './Callback/Callback';
-import Auth from './Auth/Auth';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Callback from './pages/Callback/Callback';
+import Auth from './pages/Auth/Auth';
 import history from './history';
 
 const auth = new Auth();
