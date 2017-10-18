@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { Panel, ControlLabel, Glyphicon } from 'react-bootstrap';
+// import { Link } from "react-router-dom";
+import { Panel, ControlLabel, } from 'react-bootstrap';
 import API from "../../utils/API";
+import { Col, Row, Container } from "../../components/Grid";
+import { Input, FormBtn } from "../../components/Form";
 // import './Profile.css';
 
 class Dashboard extends Component {
@@ -18,7 +21,7 @@ class Dashboard extends Component {
   state = {
     users: [],
     username: "",
-    oneMileRun: "",
+    avgMileWalking: "",
     avgMileJogging: "",
     avgMileBiking: "",
     open: true,
@@ -35,7 +38,7 @@ class Dashboard extends Component {
     if (this.state.username && this.state.avgMileWalking) {
       API.saveUser({
         username: this.state.username,
-        oneMileRun: this.state.oneMileRun,
+        avgMileWalking: this.state.avgMileWalking,
         avgMileJogging: this.state.avgMileJogging,
         avgMileBiking: this.state.avgMileBiking,
       })
@@ -54,6 +57,49 @@ class Dashboard extends Component {
             <div>
               <h1>{profile.name}</h1>
             </div>
+            <div  aria-expanded={this.state.open}>
+            <Row>
+              <Col size="md-6">
+              
+                  <h1>Please Complete Your Profile?</h1>
+         
+                <form>
+                  <Input
+                    value={this.state.username}
+                    onChange={this.handleInputChange}
+                    name="username"
+                    placeholder="username (requi#0b0e7b)"
+                  />
+                  <Input
+                    value={this.state.avgMileWalking}
+                    onChange={this.handleInputChange}
+                    name="avgMileWalking"
+                    placeholder="Average Mile Walking (requi#0b0e7b)"
+                  />
+                  <Input
+                    value={this.state.avgMileJogging}
+                    onChange={this.handleInputChange}
+                    name="avgMileJogging"
+                    placeholder="Average Mile Jogging (optional)"
+                  />
+                  <Input
+                    value={this.state.avgMileBiking}
+                    onChange={this.handleInputChange}
+                    name="avgMileBiking"
+                    placeholder="Average Mile Biking (optional)"
+                  />
+                  <FormBtn
+                    disabled={!(this.state.avgMileWalking && this.state.username)}
+                   
+                    onClick={this.handleFormSubmit}
+                  >
+                    Submit
+                  </FormBtn>
+                </form>
+              </Col>
+               
+            </Row>
+          </div>
             <pre>{JSON.stringify(profile, null, 2)}</pre>
           </Panel>
         </div>

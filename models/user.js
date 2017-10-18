@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   username: { type: String, required: true },
-  oneMileRun: { type: Number, required: true },
-  avgMileJogging: { type: Number, required: true },
-  avgMileBiking: { type: Number, required: true },
+  avgMileWalking: { type: Number, required: true },
+  avgMileJogging: { type: Number, required:false  },
+  avgMileBiking: { type: Number, required: false },
   date: { type: Date, default: Date.now }
 });
 
