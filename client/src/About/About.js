@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
+import Panel from "../components/Panel";
 import Safiyya from "./Images/Safiyya.jpg";
 import Menelik from "./Images/Menelik.jpg";
 import Ray from "./Images/Ray.jpg";
@@ -16,7 +17,7 @@ class About extends Component {
       <div>
       
         <Container>
-       
+          <Panel>
           <Row>
             <h1 className="text-center">Meet Our Developers</h1>
           </Row>
@@ -29,7 +30,7 @@ class About extends Component {
                   <img className="img-circle bioPic" alt="Safiyya Shariff" src={Safiyya}></img>
                   <Row>
                     <a href="https://github.com/ssharif10" target="_blank"><img className="img-circle links " alt="github" src={Github}></img></a>
-                    <a href="https://www.linkedin.com/in/safiyya-sharif-cpim" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
+                    <a href="https://www.linkedin.com/in/safiyya-sharif-cpim" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col>
                 <Col size="md-3 md-offset-1">
@@ -37,7 +38,7 @@ class About extends Component {
                   <img className="img-circle bioPic" alt="Meguel Chavez" src="http://via.placeholder.com/140x140"></img>
                   <Row>
                     <a href="https://github.com/mc4tech" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
-                    <a href="www.linkedin.com/in/meguel-chavez" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
+                    <a href="www.linkedin.com/in/meguel-chavez" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col>
                 <Col size="md-3 md-offset-1">
@@ -49,7 +50,7 @@ class About extends Component {
                   </Row>
                 </Col>  
               </Row>
-              <Row>
+              <div className="row"id="bottom">
                 <Col size="md-3 md-offset-3">
                   <h3>Carlvis Jones</h3>
                   <img className="img-circle bioPic" alt="Carlvis Jones" src="http://via.placeholder.com/140x140"></img>
@@ -66,10 +67,10 @@ class About extends Component {
                     <a href="https://www.linkedin.com/in/ray-shin-91176016/" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
                   </Row>
                 </Col> 
-                 
-              </Row> 
+              </div> 
             </div> 
           </Col>
+          </Panel>
         </Container>
       </div>
       );
