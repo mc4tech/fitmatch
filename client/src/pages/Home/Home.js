@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Main, Query, Saved, Search } from "../../components/Scrape";
 
 class Home extends Component {
   login() {
