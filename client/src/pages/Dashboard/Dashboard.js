@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Panel, ControlLabel, } from 'react-bootstrap';
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
-// import './Profile.css';
+import { List, ListItem } from "../../components/List";
+import DeleteBtn from "../../components/DeleteBtn";
 
 class Dashboard extends Component {
+
+  state = {
+    users: [],
+    username: "",
+    avgMileWalking: "",
+    avgMileJogging: "",
+    avgMileBiking: "",
+    open: true,
+  };
+
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
@@ -18,14 +29,25 @@ class Dashboard extends Component {
       this.setState({ profile: userProfile });
     }
   };
-  state = {
-    users: [],
-    username: "",
-    avgMileWalking: "",
-    avgMileJogging: "",
-    avgMileBiking: "",
-    open: true,
+
+  componentDidMount() {
+    this.loadUsers();
+  }
+
+  loadUsers = () => {
+    API.getUsers()
+      .then(res =>
+        this.setState({ users: res.data, username: "", avgMileWalking: "", avgMileJogging: "", avgMileBiking: "" })
+      )
+      .catch(err => console.log(err));
   };
+
+  deleteBook = id => {
+    API.deleteUser(id)
+      .then(res => this.loadUsers())
+      .catch(err => console.log(err));
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -101,6 +123,27 @@ class Dashboard extends Component {
             </Row>
           </div>
             {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}
+          </Panel>
+          </div>
+        <div className="matches-area">
+          <Panel header="Matches">
+            {this.state.users.length ? (
+            <List>
+              {this.state.users.map(user => (
+                <ListItem key={user._id}>
+                  <Link to={"/users/" + user._id}>
+                    <strong>
+                      {user.username} 
+                    </strong>
+                    <span>Walks:{user.avgMileWalking} Jogs:{user.avgMileJogging} Bikes:{user.avgMileBiking}</span>
+                  </Link>
+                  <DeleteBtn onClick={() => this.deleteBook(user._id)} />
+                </ListItem>
+              ))}
+            </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
           </Panel>
         </div>
       </div>
