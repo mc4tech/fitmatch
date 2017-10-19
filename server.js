@@ -17,13 +17,19 @@ app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
-// Connect to the Mongo DB
-mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://heroku_0267gz13:ds70pbclnhms89ivfgv7fsiuhp@ds125195.mlab.com:25195/heroku_0267gz13",
-	{
-	  useMongoClient: true
-	}
-);
+
+// Database Configuration with Mongoose
+if(process.env.NODE_ENV == 'production'){
+  mongoose.connect('mongodb://heroku_0267gz13:ds70pbclnhms89ivfgv7fsiuhp@ds125195.mlab.com:25195/heroku_0267gz13');
+}
+else{
+	mongoose.connect(
+		process.env.MONGODB_URI || "mongodb://localhost/fitmatch",
+		{
+		  useMongoClient: true
+		}
+	);
+}
 
 var db = mongoose.connection;
 // Show any mongoose errors
@@ -37,5 +43,6 @@ db.once("open", function() {
 });
 
 app.listen(PORT, function() {
-  console.log(`🌎 ==> API Server now on port ${PORT}!`);
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
+
