@@ -3,16 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/menelik7/fitmatch.git"
-  },
-  "author": "Menelik Tefera",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/menelik7/fitmatch/issues"
-  },
-  "homepage": "https://github.com/menelik7/fitmatch#readme",
   "dependencies": {
     "auth0-js": "^8.8.0",
     "bootstrap": "^3.3.7",
@@ -28,8 +18,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {}
+  }
 }
