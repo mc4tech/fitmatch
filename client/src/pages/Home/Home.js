@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Text from "../../components/Text";
+//import PanelWells from "../../components/PanelWells";
 
 class Home extends Component {
   login() {
@@ -18,8 +19,8 @@ class Home extends Component {
         }
         {
           !isAuthenticated() && (
-              <h4>
-                You are not logged in! Please{' '}
+              <h5>
+                Please{' '}
                 <a
                   style={{ cursor: 'pointer' }}
                   onClick={this.login.bind(this)}
@@ -27,10 +28,11 @@ class Home extends Component {
                   Log In
                 </a>
                 {' '}to continue.
-              </h4>
+              </h5>
             )
         }
         <Text/>
+
       </div>
     );
   }

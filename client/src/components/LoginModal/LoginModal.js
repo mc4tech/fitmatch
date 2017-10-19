@@ -7,6 +7,7 @@ const LoginModal = () => (
   <div>
   state = {
    showModal: false
+   console.log (showModal);
   };
 
 
@@ -84,4 +85,3 @@ const LoginModal = () => (
 );
 
 export default LoginModal;
-  
