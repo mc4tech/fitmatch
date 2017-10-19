@@ -1,5 +1,5 @@
 export const AUTH_CONFIG = {
   domain: 'menelik7.auth0.com',
-  clientId: 'j8zNOl7XsJ12ETMJ30cERHLoQKyXm4sE',
+  clientId: 'hBbO2Hhtrh2bsTCyChQ4CBBkaytTBKiV',
   callbackUrl: 'https://gt-fitmatch.herokuapp.com/callback'
 }
