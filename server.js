@@ -5,31 +5,28 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Serve up static assets
+app.use(express.static("client/build"));
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
-// Serve up static assets
-app.use(express.static("client/public"));
+
 // Add routes, both API and view
 app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 
-// Database Configuration with Mongoose
-if(process.env.NODE_ENV == 'production'){
-  mongoose.connect('mongodb://heroku_0267gz13:ds70pbclnhms89ivfgv7fsiuhp@ds125195.mlab.com:25195/heroku_0267gz13');
-}
-else{
-	mongoose.connect(
-		process.env.MONGODB_URI || "mongodb://localhost/fitmatch",
-		{
-		  useMongoClient: true
-		}
-	);
-}
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/fitmatch",
+  {
+    useMongoClient: true
+  }
+);
 
 var db = mongoose.connection;
 // Show any mongoose errors
