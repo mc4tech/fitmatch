@@ -26,8 +26,7 @@ export const makeMainRoutes = () => {
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route path="/about" render={(props) => <About auth={auth} {...props} />} />
           <Route path="/dashboard" render={(props) => <Dashboard auth={auth} {...props} />} />
-          <Route path="/detail" render={(props) => <Detail auth={auth} {...props} />} />
-          <Route path="/nomatch" render={(props) => <NoMatch auth={auth} {...props} />} />
+          <Route exact path="/users/:id" component={Detail} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} /> 

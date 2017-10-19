@@ -23,23 +23,13 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.book.title} by {this.state.book.author}
+                {this.state.user.username} Fix dis shit
               </h1>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Synopsis</h1>
-              <p>
-                {this.state.user.synopsis}
-              </p>
-            </article>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-2">
+          <Col size="md-12">
             <Link to="/dashboard">← Back to Dashboard</Link>
           </Col>
         </Row>
