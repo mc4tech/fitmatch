@@ -4,8 +4,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Panel from "../../components/Panel";
+import Meguel from "./Images/Meguel.jpg";
 import Carl from "./Images/Carl.png";
-// import Meguel from "./Images/Meguel.jpg";
 import Safiyya from "./Images/Safiyya.jpg";
 import Menelik from "./Images/Menelik.jpg";
 import Ray from "./Images/Ray.jpg";
@@ -70,11 +70,11 @@ state = {
                   </Row>
                 </Col>
                 <Col size="md-3 md-offset-1">
-                  <h3>Menelik Tefera</h3>
-                  <img className="img-circle bioPic" alt="Menelik Tefera" src={Menelik}></img>
+                  <h3>Meguel Chavez</h3>
+                  <img className="img-circle bioPic" src={Meguel} alt="Meguel Chavez" ></img>
                   <Row>
-                    <a href="https://github.com/menelik7" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
-                    <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
+                    <a href="https://github.com/mc4tech" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
+                    <a href="www.linkedin.com/in/meguel-chavez" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col>
                 <Col size="md-3 md-offset-1">
