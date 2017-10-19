@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "fitmatch",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,8 +11,16 @@
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menelik7/fitmatch.git"
+  },
+  "author": "Menelik Tefera",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menelik7/fitmatch/issues"
+  },
+  "homepage": "https://github.com/menelik7/fitmatch#readme",
   "devDependencies": {
     "concurrently": "^3.5.0",
     "nodemon": "^1.11.0"
