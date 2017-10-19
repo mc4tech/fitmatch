@@ -6,6 +6,8 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import Panel from "../../components/Panel";
 import Safiyya from "./Images/Safiyya.jpg";
 import Menelik from "./Images/Menelik.jpg";
+import Meguel from "./Images/Meguel.jpg";
+import Carl from "./Images/Carl.png";
 import Ray from "./Images/Ray.jpg";
 import Linkedin from "./Images/linkedin.png";
 import Github from "./Images/GitHub-Mark-64px.png";
@@ -69,7 +71,7 @@ state = {
                 </Col>
                 <Col size="md-3 md-offset-1">
                   <h3>Meguel Chavez</h3>
-                  <img className="img-circle bioPic" alt="Meguel Chavez" src="http://via.placeholder.com/140x140"></img>
+                  <img className="img-circle bioPic" alt="Meguel Chavez" src={Meguel}></img>
                   <Row>
                     <a href="https://github.com/mc4tech" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
                     <a href="www.linkedin.com/in/meguel-chavez" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
@@ -80,17 +82,17 @@ state = {
                   <img className="img-circle bioPic" alt="Menelik Tefera" src={Menelik}></img>
                   <Row>
                     <a href="https://github.com/menelik7" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
-                    <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
+                    <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col>  
               </Row>
               <div className="row"id="bottom">
                 <Col size="md-3 md-offset-3">
                   <h3>Carlvis Jones</h3>
-                  <img className="img-circle bioPic" alt="Carlvis Jones" src="http://via.placeholder.com/140x140"></img>
+                  <img className="img-circle bioPic" alt="Carlvis Jones" src={Carl}></img>
                   <Row>
                     <a href="https://github.com/TangentLine" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
-                    <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
+                    <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col>
                 <Col size="md-3 md-offset-1">
@@ -98,7 +100,7 @@ state = {
                   <img className="img-circle bioPic" alt="Ray Shin" src={Ray}></img>
                   <Row>
                     <a href="https://github.com/rayjshin" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
-                    <a href="https://www.linkedin.com/in/ray-shin-91176016/" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src={Linkedin}></img></a>
+                    <a href="https://www.linkedin.com/in/ray-shin-91176016/" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
                   </Row>
                 </Col> 
               </div> 
