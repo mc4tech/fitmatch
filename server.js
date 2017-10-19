@@ -37,5 +37,5 @@ db.once("open", function() {
 });
 
 app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+  console.log(`🌎 ==> API Server now on port ${PORT}!`);
 });
