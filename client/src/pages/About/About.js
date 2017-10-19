@@ -4,10 +4,10 @@ import { Col, Row, Container } from "../../components/Grid";
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Panel from "../../components/Panel";
-import Safiyya from "./Images/Safiyya.jpg";
-import Menelik from "./Images/Menelik.jpg";
 import Meguel from "./Images/Meguel.jpg";
 import Carl from "./Images/Carl.png";
+import Safiyya from "./Images/Safiyya.jpg";
+import Menelik from "./Images/Menelik.jpg";
 import Ray from "./Images/Ray.jpg";
 import Linkedin from "./Images/linkedin.png";
 import Github from "./Images/GitHub-Mark-64px.png";
@@ -71,7 +71,7 @@ state = {
                 </Col>
                 <Col size="md-3 md-offset-1">
                   <h3>Meguel Chavez</h3>
-                  <img className="img-circle bioPic" alt="Meguel Chavez" src={Meguel}></img>
+                  <img className="img-circle bioPic" src={Meguel} alt="Meguel Chavez" ></img>
                   <Row>
                     <a href="https://github.com/mc4tech" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
                     <a href="www.linkedin.com/in/meguel-chavez" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>
@@ -89,7 +89,7 @@ state = {
               <div className="row"id="bottom">
                 <Col size="md-3 md-offset-3">
                   <h3>Carlvis Jones</h3>
-                  <img className="img-circle bioPic" alt="Carlvis Jones" src={Carl}></img>
+                  <img className="img-circle bioPic" src={Carl} alt="Carlvis Jones"></img>
                   <Row>
                     <a href="https://github.com/TangentLine" target="_blank"><img className="img-circle links" alt="github" src={Github}></img></a>
                     <a href="#" target="_blank"><img className="img-circle links col-md-offset-1" alt="linkedin" src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"></img></a>

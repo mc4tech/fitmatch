@@ -31,6 +31,7 @@ export const makeMainRoutes = () => {
             handleAuthentication(props);
             return <Callback {...props} /> 
           }}/>
+        
         </div>
       </Router>
   );
