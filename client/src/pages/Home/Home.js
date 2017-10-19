@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Text from "../../components/Text";
 
 class Home extends Component {
   login() {
@@ -29,6 +30,7 @@ class Home extends Component {
               </h4>
             )
         }
+        <Text/>
       </div>
     );
   }
