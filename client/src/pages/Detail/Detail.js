@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.user.username} Fix dis shit
+                {this.state.user.username} Under Construction
               </h1>
             </Jumbotron>
           </Col>
