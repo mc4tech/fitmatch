@@ -47,7 +47,7 @@ state = {
     return (  
       <div>
       
-        <Container>
+      <div className="container" id="profile">
         <div  aria-expanded={this.state.open}>
             <Row>
                
@@ -107,7 +107,7 @@ state = {
             </div> 
           </Col>
           </Panel>
-        </Container>
+        </div>
       </div>
       );
   }

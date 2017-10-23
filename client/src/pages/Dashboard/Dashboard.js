@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
 import DeleteBtn from "../../components/DeleteBtn";
+import ApproveBtn from "../../components/ApproveBtn";
 
 class Dashboard extends Component {
 
@@ -42,8 +43,14 @@ class Dashboard extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
+  deleteUser = id => {
     API.deleteUser(id)
+      .then(res => this.loadUsers())
+      .catch(err => console.log(err));
+  };
+
+  saveUser = userData => {
+    API.deleteUser(userData)
       .then(res => this.loadUsers())
       .catch(err => console.log(err));
   };
@@ -74,7 +81,7 @@ class Dashboard extends Component {
     return (
       <div className="container" id="profile">
         <div className="profile-area">
-          <Panel header="Profile">
+          <Panel className="panel-info1" header="Profile">
             <img src={profile.picture} alt="profile" />
             <div>
               <h1>{profile.name}</h1>
@@ -124,29 +131,33 @@ class Dashboard extends Component {
           </div>
             {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}
           </Panel>
-          </div>
-        <div className="matches-area">
-          <Panel header="Matches">
-            {this.state.users.length ? (
-            <List>
-              {this.state.users.map(user => (
-                <ListItem key={user._id}>
-                  <Link to={"/users/" + user._id}>
-                    <strong>
-                      {user.username} 
-                    </strong>
-                    <span>Walks:{user.avgMileWalking} Jogs:{user.avgMileJogging} Bikes:{user.avgMileBiking}</span>
-                  </Link>
-                  <DeleteBtn onClick={() => this.deleteBook(user._id)} />
-                </ListItem>
-              ))}
-            </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
+          <Panel className="panel-info2" header="Matches">
+              {this.state.users.length ? (
+              <List>
+                {this.state.users.map(user => (
+                  <ListItem key={user._id}>
+                    <Link to={"/users/" + user._id}>
+                      <strong>
+                        {user.username} 
+                      </strong>
+                    </Link>
+                    <div id="user-info">
+                      <h5>Walks:{user.avgMileWalking}</h5>
+                      <h5>Jogs:{user.avgMileJogging}</h5> 
+                      <h5>Bikes:{user.avgMileBiking}</h5>
+                    </div>
+                    <DeleteBtn onClick={() => this.deleteUser(user._id)} />
+                    <ApproveBtn disabled={!(this.state.avgMileWalking && this.state.username)} onClick={this.handleFormSubmit} />
+                  </ListItem>
+                ))}
+              </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            
           </Panel>
         </div>
-      </div>
+          </div>      
     );
   }
 }
