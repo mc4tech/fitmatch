@@ -142,9 +142,9 @@ class Dashboard extends Component {
                       </strong>
                     </Link>
                     <div id="user-info">
-                      <h5>Walks:{user.avgMileWalking}</h5>
-                      <h5>Jogs:{user.avgMileJogging}</h5> 
-                      <h5>Bikes:{user.avgMileBiking}</h5>
+                      <h5>Walks: {user.avgMileWalking}</h5>
+                      <h5>Jogs: {user.avgMileJogging}</h5> 
+                      <h5>Bikes: {user.avgMileBiking}</h5>
                     </div>
                     <DeleteBtn onClick={() => this.deleteUser(user._id)} />
                     <ApproveBtn disabled={!(this.state.avgMileWalking && this.state.username)} onClick={this.handleFormSubmit} />
